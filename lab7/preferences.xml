@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:key="simulation_parameters"
+    android:title="Simulation Parameters">
+    <EditTextPreference
+        android:key="spring_stiffness"
+        android:title="Spring Stiffness"
+        android:summary="Change the stiffness of the spring"
+        android:defaultValue="1.5" />
+    <com.impecoven.blake.bimpecovenlab7.NumberPickerPreference
+        android:key="coils"
+        android:title="Number of Coils(8-14)"
+        android:summary="Specify number of coils"
+        android:defaultValue="11"
+        custom:max="14"
+        custom:min="8"
+        custom:wrap="false" />
+    <com.impecoven.blake.bimpecovenlab7.NumberPickerPreference
+        android:key="displacement"
+        android:title="Initial Displacement"
+        android:summary="Specify initial displacement"
+        android:defaultValue="0"
+        custom:max="16"
+        custom:min="0"
+        custom:wrap="false" />
+    <ListPreference
+        android:key="mass_shape"
+        android:title="Mass Shape"
+        android:summary="%s"
+        android:dialogTitle="Shape"
+        android:entries="@array/mass_shape"
+        android:entryValues="@array/mass_shape"
+        android:defaultValue="Rectangle" />
+</PreferenceScreen>
